@@ -1,4 +1,6 @@
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class User {
 
@@ -7,6 +9,7 @@ public class User {
     public String password;
     public ArrayList<Chat> chats;
     public ClientHandler clientHandler;
+    public Color color;
 
     public static long user_number = 0;
 
@@ -16,6 +19,7 @@ public class User {
         this.name = name;
         this.password = password;
         chats = new ArrayList<>();
+        color = new Color(new Random().nextInt(0xFFFFFF));
     }
 
     public Chat findChatByName(String name) {

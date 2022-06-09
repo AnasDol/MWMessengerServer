@@ -14,22 +14,16 @@ public class Server {
 
     public Server() {
 
-        Chat testChat1 = new Chat("Туса на алтае в субботу", "$null");
-        testChat1.history = "Глеб: прив, кто поедет? Давид: я точно нет";
-        testChat1.lastMessage = "Давид: я точно нет";
-
-        Chat testChat2 = new Chat("BigBadGuys", "$null");
-        testChat2.history = "Колян: ну вы да конечно";
-        testChat2.lastMessage = "Колян: ну вы да конечно";
-
-        Chat testChat3 = new Chat("Девачки2", "1234");
-        testChat3.history = "Катя: придешь? Таня: конечно";
-        testChat3.lastMessage = "Таня: конечно";
+        Chat testChat1 = new Chat("СЛАВА НГТУ", "$null");
+        Chat testChat2 = new Chat("авт-042 лучшие коты", "1234");
+        Chat testChat3 = new Chat("шашлыки в субботу", "1234");
+        Chat testChat4 = new Chat("в джазе только девушки", "$null");
 
 
         existingChats.add(testChat1);
         existingChats.add(testChat2);
         existingChats.add(testChat3);
+        existingChats.add(testChat4);
 
 
         ServerSocket serverSocket = null;

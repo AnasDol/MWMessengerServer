@@ -6,7 +6,6 @@ public class Chat {
 
     public String name;
     public String password; // чат считается публичным, если пароль - пустая строка
-    public String history;
     public String lastMessage;
 
     public ArrayList<Message> messages = new ArrayList<>();
@@ -15,7 +14,6 @@ public class Chat {
     public Chat (String name, String password) {
         this.name = name;
         this.password = password;
-        this.history = "";
     }
 
     public String toString() {
@@ -42,9 +40,11 @@ public class Chat {
 
         }
 
-        public String toString() {
+        public String toString() { // #маша#red#12 дек. 2022#привет
 
-            return "#"+sender.name+"#"+(new SimpleDateFormat("d MMM y H:m").format(dateTime))+"#"+text;
+            String color = sender.color.getRed()+"/"+sender.color.getGreen()+"/"+sender.color.getBlue();
+
+            return "#"+sender.name+"#"+color+"#"+(new SimpleDateFormat("d MMM y H:mm").format(dateTime))+"#"+text;
 
         }
 
